@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dino Discovery | My First Dinosaur Adventure</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Dino Discovery home">
+      <span class="brand-icon">🦖</span>
+      <span>Dino<span class="brand-light">Discovery</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">🏠 Home</a>
+      <a href="#about" class="nav-link">👋 About</a>
+      <a href="#dinosaurs" class="nav-link">🦕 Dinosaurs</a>
+      <a href="#world" class="nav-link">🌋 Dino World</a>
+      <a href="#quiz" class="nav-link">🎮 Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE 1: HOME -->
+    <section id="home" class="page hero-page">
+      <div class="hero-copy">
+        <p class="eyebrow">A prehistoric learning adventure</p>
+        <h1>Welcome to<br><span>Dino Discovery!</span></h1>
+        <p class="hero-subtitle">Hello, Little Explorer! Let's travel back in time and discover amazing dinosaurs.</p>
+        <div class="hero-actions">
+          <a class="button button-yellow" href="#dinosaurs">🦖 Start Adventure</a>
+          <a class="button button-green" href="#about">📖 Learn About Us</a>
+        </div>
+        <div class="hero-tags"><span>🌿 Learn</span><span>🔎 Explore</span><span>⭐ Have fun</span></div>
+      </div>
+      <div class="hero-art" aria-label="Friendly dinosaur illustration">
+        <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+        <div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="volcano">🌋</div>
+        <div class="big-dino">🦖</div>
+        <div class="hero-bubble">ROAR-some!</div>
+        <div class="ground"></div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: ABOUT -->
+    <section id="about" class="page section-page">
+      <div class="section-heading">
+        <p class="eyebrow">Your learning adventure starts here</p>
+        <h2>About <span>Dino Discovery</span></h2>
+        <p>Dino Discovery is a fun learning website made for young explorers aged 5–6.</p>
+      </div>
+      <div class="about-layout">
+        <div class="about-dino">🦕<span class="speech-bubble">Hi, explorer!</span></div>
+        <div class="about-card">
+          <h3>What will you learn?</h3>
+          <div class="learning-grid">
+            <div class="learning-item"><span>🦖</span><b>Dinosaur names</b></div>
+            <div class="learning-item"><span>🌋</span><b>Dino world</b></div>
+            <div class="learning-item"><span>🥬</span><b>What dinos eat</b></div>
+            <div class="learning-item"><span>💡</span><b>Fun facts</b></div>
+            <div class="learning-item"><span>🎮</span><b>Quiz questions</b></div>
+          </div>
+          <a class="button button-yellow" href="#dinosaurs">Let's Explore! →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: MEET THE DINOSAURS -->
+    <section id="dinosaurs" class="page section-page">
+      <div class="section-heading">
+        <p class="eyebrow">Meet your prehistoric friends</p>
+        <h2>Meet Our <span>Dinosaurs!</span></h2>
+        <p>Choose a dinosaur card to learn more.</p>
+      </div>
+      <div class="dino-grid" id="dinoGrid">
+        <button class="dino-card dino-green" data-dino="trex"><span class="dino-emoji">🦖</span><b>T-Rex</b><small>Big teeth</small></button>
+        <button class="dino-card dino-blue" data-dino="brachio"><span class="dino-emoji">🦕</span><b>Brachiosaurus</b><small>Long neck</small></button>
+        <button class="dino-card dino-purple" data-dino="triceratops"><span class="dino-emoji">🦏</span><b>Triceratops</b><small>Three horns</small></button>
+        <button class="dino-card dino-orange" data-dino="stego"><span class="dino-emoji">🦕</span><b>Stegosaurus</b><small>Back plates</small></button>
+        <button class="dino-card dino-pink" data-dino="raptor"><span class="dino-emoji">🦖</span><b>Velociraptor</b><small>Small hunter</small></button>
+      </div>
+      <div class="dino-detail" id="dinoDetail" aria-live="polite">
+        <div class="detail-emoji">👆</div><div><h3>Pick a dinosaur!</h3><p>Click any dinosaur card above to discover a fun fact.</p></div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: DINO WORLD -->
+    <section id="world" class="page section-page">
+      <div class="section-heading">
+        <p class="eyebrow">Travel back in time</p>
+        <h2>Explore the <span>Dino World!</span></h2>
+        <p>Discover where dinosaurs lived and what they ate.</p>
+      </div>
+      <div class="world-feature">
+        <div class="forest-art">🌳🌴🦕🌿</div>
+        <div><h3>Where did dinosaurs live?</h3><p>Dinosaurs lived long ago in many places, including forests and open lands.</p></div>
+      </div>
+      <h3 class="center-heading">What did they eat?</h3>
+      <div class="food-grid">
+        <div class="food-card plant"><div class="food-icon">🥬</div><h3>Plant Eaters</h3><p>Brachiosaurus, Stegosaurus and Triceratops ate plants.</p></div>
+        <div class="food-card meat"><div class="food-icon">🥩</div><h3>Meat Eaters</h3><p>T-Rex and Velociraptor ate meat.</p></div>
+      </div>
+      <div class="fun-fact-box">
+        <div class="fact-lamp">💡</div><div class="fact-copy"><h3>Dino Fun Fact</h3><p id="funFactText">Some dinosaurs were much bigger than humans!</p></div>
+        <button class="button button-yellow" id="factButton">Show another fact!</button>
+      </div>
+    </section>
+
+    <!-- PAGE 5: QUIZ -->
+    <section id="quiz" class="page section-page quiz-page">
+      <div class="section-heading">
+        <p class="eyebrow">Ready for the challenge?</p>
+        <h2>Dino <span>Challenge!</span></h2>
+        <p>Answer 10 questions and become a Dino Expert!</p>
+      </div>
+      <div class="quiz-shell">
+        <div class="quiz-progress-row"><span id="questionCounter">Question 1 of 10</span><span id="progressPercent">10%</span></div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <form id="quizForm">
+          <div id="quizQuestions"></div>
+          <div class="quiz-actions">
+            <button type="button" class="button button-yellow" id="checkButton">Check Answer ✓</button>
+            <button type="button" class="button button-green hidden" id="nextButton">Next Question →</button>
+          </div>
+          <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- PAGE 6: RESULT -->
+    <section id="result" class="page section-page result-page">
+      <div class="result-card">
+        <div class="confetti">🎉 ⭐ 🎊</div>
+        <div class="result-mascot">🦖</div>
+        <p class="eyebrow">Adventure completed</p>
+        <h2>Dino Explorer <span>Result!</span></h2>
+        <p class="score-label">Your Score</p>
+        <div class="score-number"><span id="finalScore">0</span><small>/ 10</small></div>
+        <h3 id="resultMessage">Great exploring!</h3>
+        <p id="resultSubtext">Keep learning and discover more dinosaurs.</p>
+        <button class="button button-yellow" id="retryButton">↻ Take Quiz Again</button>
+        <a class="text-link" href="#home">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>🦖 Dino Discovery</span><span>Learn • Explore • Have fun!</span></footer>
+</body>
+</html>
